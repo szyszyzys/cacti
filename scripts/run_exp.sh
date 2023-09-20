@@ -10,6 +10,7 @@ do
   do
       echo current associativity "$a" cache size "$c"
       cp "c.cfg" "$filename"
+      echo " " >> "$filename"
       echo "-size (bytes) $c" >> "$filename"
       echo "-associativity $a" >> "$filename"
       ./cacti -infile "$filename" | tee -a ./scripts/res.log
