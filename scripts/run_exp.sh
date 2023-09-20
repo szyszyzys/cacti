@@ -4,9 +4,9 @@ associativities=$1
 cache_sizes=${2,-"65536 131072 262144 524288 1048576 2097152"}
 filename="exp.cfg"
 
-for a in $associativities
+for a in $associativities;
 do
-  for c in $cache_sizes
+  for c in $cache_sizes;
   do
       cp "c.cfg" "$filename"
       echo "-size (bytes) $c" >> "$filename"
